@@ -1,0 +1,183 @@
+.s-menu {
+  background-color: $c-1;
+  padding: 0 15px;
+  z-index: 5;
+  position: relative;
+  @include transition();
+
+  @include tablet {
+  }
+  @include desktop {
+    //height: 60px;
+   // overflow: hidden;
+    opacity: 1;
+  }
+
+  .s-header--small &{
+    box-shadow: 0 5px 10px $c-3;
+
+    @include desktop {
+
+      opacity: 0;
+    }
+  }
+
+  .s-header--small .s-menu__canvas.active & {
+    display: block;
+    height: auto;
+    width: auto;
+    float: none;
+    font-variant: normal;
+    position: static;
+    opacity: 1;
+  }
+
+  .menu {
+    float: none;
+    margin: 0;
+
+    @include desktop {
+    display: block;
+    }
+
+    li {
+      float: none;
+      display: block;
+
+      @include desktop {
+        display: inline-block;
+        vertical-align: top;
+      }
+
+      .s-menu__canvas.active & {
+
+        @include desktop {
+          display: block;
+        }
+      }
+
+      a {
+        display: block;
+        color: #fff;
+        margin: 0;
+        padding: 17px;
+        font-size: 1.2em;
+        line-height: 1.2;
+        border-radius: 0;
+        background: $c-1;
+        @include transition();
+
+        &:hover {
+          background-color: #000;
+        }
+        &.active {
+          background-color: #252525;
+        }
+//&:hover +ul {
+//  display: block;
+//}
+      }
+      ul {
+        //display: none;
+
+      }
+
+      &.open {
+
+        a {
+          background: #252525;
+        }
+      }
+    &.expanded a {
+
+      @include desktop {
+        padding-right: 40px;
+        width: 190px;
+
+        .s-header--small & {
+          width: auto;
+        }
+      }
+
+
+    }
+    }
+
+
+  }
+  .navbar-collapse {
+    padding: 0;
+  }
+
+
+
+}
+
+.s-menu__toggle {
+  background: white;
+  position: absolute;
+  padding: 12px 0;
+  cursor: pointer;
+  width: 40px;
+  top: 70px;
+  right: 15px;
+  z-index: 30;
+  @include transition();
+
+  @include tablet {
+    top: 90px;
+  }
+
+  @include desktop {
+    top: 20px;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .s-header--small & {
+    top: 20px;
+    display: block;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  span, span:before, span:after {
+    height: 5px;
+    width: inherit;
+    background: $c-1;
+    display: block;
+    content: ' ';
+    transition: all 500ms ease-in-out;
+  }
+  span {
+   &:before {
+      position: absolute;
+      top: 0;
+    }
+    &:after {
+      position: absolute;
+      top: 24px;
+    }
+  }
+  &.active {
+    span {
+      background-color: transparent;
+      &:before {
+        top: 12px;
+        transform: rotate(45deg);
+      }
+      &:after {
+        top: 12px;
+        transform: rotate(-45deg);
+      }
+    }
+  }
+}
+
+.nav:before, .nav:after {
+  content: none;
+}
+
+.s-menu__content {
+  @include max-width;
+}

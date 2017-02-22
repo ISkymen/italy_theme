@@ -1,0 +1,29 @@
+body {
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 18px;
+  line-height: 27px;
+}
+
+.page-header {
+  font-size: 35px;
+  line-height: 1.20;
+  padding: 0;
+  margin: 0 0 20px;
+  font-weight: 700;
+}
+
+.main-container {
+  margin-top: 145px;
+  padding-top: 20px;
+  @include tablet {
+    margin-top: 230px;
+  }
+}
+
+a {
+  color: $c-1;
+}
+
+.views-exposed-form .views-exposed-widget .btn {  // OVERRIDE
+  margin-top: 2.2em;
+}

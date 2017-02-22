@@ -1,0 +1,101 @@
+.s-header {
+  background: $c-3;
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 0;
+  box-shadow: 0 1px 5px grey;
+  z-index: 1030;
+  @include transition(0.5s);
+
+
+  &.s-header--small {
+
+  //  background: $c-1;
+  //  box-shadow: 0 5px 10px $c-3;
+
+  }
+}
+
+.s-header__content {
+  position: relative;
+  z-index: 20;
+  background: $c-3;
+  height: 85px;
+  padding: 10px 15px;
+  @include transition;
+  @include max-width;
+  @include tablet {
+    height: 120px;
+  }
+
+  .s-header--small & {
+     height: 70px;
+  }
+}
+
+.s-header__logo {
+  vertical-align: middle;
+  height: inherit;
+  max-height: 100%;
+  font-size: 0;
+
+  img {
+    height: 100%;
+    padding: 10px 0;
+    .s-header--small & {
+
+
+    }
+
+   // display: inline-block;
+  }
+}
+
+.s-header__branding {
+  display: inline-block;
+  vertical-align: middle;
+
+  @include tablet {
+    width: 250px;
+  }
+
+  @include desktop {
+    width: 380px;
+  }
+
+}
+
+.s-header__name {
+  display: inline-block;
+  vertical-align: middle;
+  color: $c-2;
+  font-size: 40px;
+  font-weight: bold;
+  margin: 0 20px;
+  @include transition();
+
+  .s-header--small & {
+    font-size: 30px;
+//    color: $c-3;
+  }
+}
+
+.s-header__slogan {
+  display: none;
+  @include tablet {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 12px;
+    font-size: 24px;
+    @include transition();
+
+    .s-header--small & {
+   //   text-shadow: -1px 0px 1px #000000;
+   //   color: $c-3;
+    }
+  }
+
+
+
+}

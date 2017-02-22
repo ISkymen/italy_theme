@@ -1,0 +1,22 @@
+.s-footer {
+  background-color: #000;
+}
+
+.s-footer__content {
+  @include max-width;
+  padding: 15px;
+  color: $c-3;
+
+  a {
+    color: #bbb;
+
+    &:hover {
+      color: $c-3;
+      text-decoration: underline;
+    }
+  }
+
+  h6 { // OVERRIDE
+    font-size: 18px;
+  }
+}

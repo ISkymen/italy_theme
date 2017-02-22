@@ -1,0 +1,63 @@
+aside {
+
+  .menu {  // UL first level
+
+    li {
+      border-bottom: 1px solid #e7e6e4;
+      padding: 0;
+
+      a {
+        display: block;
+        position: relative;
+        font-size: 1em;
+        line-height: 18px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        background-color: transparent;
+        color: #003e54;
+        margin-bottom: 10px;
+
+        &:hover {
+          background-color: #eeeeee;
+          text-decoration: none;
+        }
+
+
+
+
+      }
+
+      ul {  // UL second level
+       // background: #e2f7ff;
+        li.expanded.open {
+          ul {  // UL third level
+            background: #e2f7ff;
+          }
+          > a {
+            background: #cef1ff;
+
+          }
+          a:hover {
+            background: #cef1ff;
+          }
+        }
+        .open & {
+
+        }
+      }
+
+      //> ul {
+      //  counter-reset: my-badass-counter;
+      //  padding: 0;
+      //  li a {
+      //    &:before {
+      //      content: counter(my-badass-counter) ". ";
+      //      counter-increment: my-badass-counter;
+      //    }
+      //  }
+      //}
+
+    }
+
+  }
+}

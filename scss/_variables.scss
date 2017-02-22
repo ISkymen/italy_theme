@@ -1,0 +1,44 @@
+$c-1: #0066CC; // Menu background, Site name
+$c-2: #252525; // Headers text
+$c-3: white; // Button background
+$c-4: #333; // Headlight
+$c-5: #666; // Headlight
+$c-6: #ccc; // Headlight
+$ff-1: 'Montserrat', sans-serif;
+$ff-2: 'Roboto', sans-serif;
+$fs-1: 14px;
+$fs-2: 22px;
+$fs-3: 18px;
+$fs-4: 16px;
+$fs-5: 10px;
+
+$tablet-width: 640px; //768px;
+$desktop-width: 960px;
+$wide-desktop-width: 1200px;
+
+@mixin max-width {
+  max-width: 1170px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+@mixin transition ($time: .5s) {
+  transition: all $time ease-in-out;
+}
+
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+@mixin wide {
+  @media (min-width: #{$wide-desktop-width}) {
+    @content;
+  }
+}

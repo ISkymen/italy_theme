@@ -1,0 +1,36 @@
+.s-menu__canvas {
+  background: white;
+  position: fixed;
+  width: 80%;
+  overflow: auto;
+  top: 130px;
+  z-index: 10;
+  display: block;
+  left: -80%;
+  height: 100%;
+  @include transition();
+  transform: translate3d(0, 0, 0);
+  &.active {
+    left: 0;
+    border-right: 1px solid #5A6772;
+  }
+
+  @include tablet {
+    top: 160px;
+  }
+
+@include desktop {
+  position: static;
+  width: auto;
+  overflow: visible;
+
+}
+  .s-header--small &{
+    top: 70px;
+    @include desktop {
+      position: fixed;
+      width: 40%;
+      overflow: auto;
+    }
+  }
+}

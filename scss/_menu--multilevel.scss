@@ -1,0 +1,48 @@
+.menu {
+
+  li {
+
+    a {
+      padding-right: 40px;
+      position: relative;
+
+      span:after {
+        line-height: 1;
+        font-size: 1.23em;
+        content: "\e259";
+        position: absolute;
+        top: 18px;
+        right: 10px;
+        display: inline-block;
+        font-family: 'Glyphicons Halflings';
+        font-style: normal;
+        font-weight: normal;
+
+        .s-menu & {
+          font-size: 1em;
+        }
+      }
+    }
+  }
+  ul {
+
+    li {
+
+      a {
+        padding-right: 40px;
+        position: relative;
+      }
+      ul {
+        display: none;
+      }
+    }
+
+    .s-menu & {
+      display: none;
+    }
+  }
+
+  &.nav {
+    padding-bottom: 0;
+  }
+}
