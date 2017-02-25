@@ -126,15 +126,12 @@
 
 
 
+
 <div class="main-container <?php print $container_class; ?>">
-
+  <?php if (!empty($page['content_header'])): ?>
+    <?php print render($page['content_header']); ?>
+  <?php endif; ?>
   <div class="row">
-
-    <?php if (!empty($page['sidebar_first'])): ?>
-      <aside class="col-sm-4" role="complementary">
-        <?php print render($page['sidebar_first']); ?>
-      </aside>  <!-- /#sidebar-first -->
-    <?php endif; ?>
 
     <section<?php print $content_column_class; ?>>
       <?php if (!empty($page['highlighted'])): ?>
@@ -159,6 +156,13 @@
       <?php endif; ?>
       <?php print render($page['content']); ?>
     </section>
+
+
+    <?php if (!empty($page['sidebar_first'])): ?>
+        <aside class="col-sm-4" role="complementary">
+          <?php print render($page['sidebar_first']); ?>
+        </aside>  <!-- /#sidebar-first -->
+    <?php endif; ?>
 
     <?php if (!empty($page['sidebar_second'])): ?>
       <aside class="col-sm-4" role="complementary">

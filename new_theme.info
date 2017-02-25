@@ -10,6 +10,7 @@ base theme = bootstrap
 
 regions[top_bar]        = 'Top Bar'
 regions[header]         = 'Header'
+regions[content_header] = 'Content Header'
 regions[highlighted]    = 'Highlighted'
 regions[help]           = 'Help'
 regions[content]        = 'Content'
@@ -30,7 +31,6 @@ stylesheets[all][] = css/style.css
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Scripts
 ;;;;;;;;;;;;;;;;;;;;;
-scripts[] = 'js/windowWidth.js'
 scripts[] = 'js/main.js'
 ;scripts[] = 'bootstrap/assets/javascripts/bootstrap/affix.js'
 ;scripts[] = 'bootstrap/assets/javascripts/bootstrap/alert.js'

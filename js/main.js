@@ -11,12 +11,6 @@
     $(document.body).css("margin-top", $(".s-header").height());
   }).resize();
 
-
-  /* Navigation menu */
-
-
-
-
 })(jQuery);
 
 
@@ -35,6 +29,7 @@ var Drupal = Drupal || {};
           $('.s-header').removeClass('s-header--small');
         }
       });
+      $(document.body).css("margin-top", $(".s-header").height()).resize();
     }
   };
 

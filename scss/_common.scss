@@ -13,10 +13,10 @@ body {
 }
 
 .main-container {
-  margin-top: 145px;
+  //margin-top: 145px;
   padding-top: 20px;
   @include tablet {
-    margin-top: 230px;
+    //margin-top: 230px;
   }
 }
 
@@ -26,4 +26,19 @@ a {
 
 .views-exposed-form .views-exposed-widget .btn {  // OVERRIDE
   margin-top: 2.2em;
+}
+
+aside .block {
+  margin-bottom: 20px;
+}
+
+section.col-sm-8 {
+  margin-bottom: 20px;
+  @include tablet {
+    float: right;
+  }
+}
+
+.region-content-header {
+  margin: 0 0 20px;
 }
