@@ -21,16 +21,18 @@
 
 @include desktop {
   position: static;
-  width: auto;
+  width: 100%;
   overflow: visible;
+  height: auto;
 
 }
   .s-header--small &{
     top: 70px;
     @include desktop {
-      position: fixed;
-      width: 40%;
+      position: static;
+  //    width: 40%;
       overflow: auto;
+
     }
   }
 }

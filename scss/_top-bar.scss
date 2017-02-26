@@ -16,6 +16,7 @@
 
   .region-top-bar {
     @include max-width;
+    padding: 0;
     height: inherit;
 
     a {
@@ -30,7 +31,7 @@
   .block {
     height: inherit;
     display: inline-block;
-    padding: 12px 22px;
+    padding: 12px 15px;
     font-size: 1.1em;
     line-height: 1;
     color: $c-3;

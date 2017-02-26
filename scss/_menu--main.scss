@@ -1,6 +1,6 @@
 .s-menu {
   background-color: $c-1;
-  padding: 0 15px;
+  padding: 15px;
   z-index: 5;
   position: relative;
   @include transition();
@@ -8,8 +8,9 @@
   @include tablet {
   }
   @include desktop {
-    //height: 60px;
-   // overflow: hidden;
+    height: 60px;
+    overflow: hidden;
+    padding: 0 15px;
     opacity: 1;
   }
 
@@ -17,19 +18,23 @@
     box-shadow: 0 5px 10px $c-3;
 
     @include desktop {
-
+      height: 0;
       opacity: 0;
     }
   }
 
   .s-header--small .s-menu__canvas.active & {
     display: block;
-    height: auto;
+
     width: auto;
     float: none;
     font-variant: normal;
     position: static;
     opacity: 1;
+
+    @include desktop {
+      height: 60px;
+    }
   }
 
   .menu {
@@ -52,7 +57,7 @@
       .s-menu__canvas.active & {
 
         @include desktop {
-          display: block;
+       //   display: block;
         }
       }
 
@@ -92,10 +97,9 @@
 
       @include desktop {
         padding-right: 40px;
-        width: 190px;
 
         .s-header--small & {
-          width: auto;
+
         }
       }
 

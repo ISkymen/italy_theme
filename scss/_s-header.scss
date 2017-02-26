@@ -83,7 +83,7 @@
 
 .s-header__slogan {
   display: none;
-  @include tablet {
+  @include desktop {
     display: inline-block;
     vertical-align: middle;
     margin: 0 12px;

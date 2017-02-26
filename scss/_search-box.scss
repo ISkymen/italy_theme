@@ -8,6 +8,7 @@
     display: inline-block;
     vertical-align: middle;
     float: right;
+    @include transition();
   }
 
   @include desktop {
@@ -15,12 +16,12 @@
     margin-right: 100px;
 
 
-    .s-header--small & {
-      padding: 15px 0;
-    }
+
   }
 
-
+  .s-header--small & {
+    padding: 15px 0;
+  }
 
 
   .form-group { // OVERRIDE

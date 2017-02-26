@@ -27,6 +27,8 @@ var Drupal = Drupal || {};
         }
         else {
           $('.s-header').removeClass('s-header--small');
+          $('.s-menu__canvas').removeClass('active');
+          $('.s-menu__toggle').removeClass('active');
         }
       });
       $(document.body).css("margin-top", $(".s-header").height()).resize();

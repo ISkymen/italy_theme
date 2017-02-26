@@ -21,7 +21,7 @@ $wide-desktop-width: 1200px;
   padding: 0 15px;
   margin: 0 auto;
 }
-@mixin transition ($time: .5s) {
+@mixin transition ($time: 0.5s) {
   transition: all $time ease-in-out;
 }
 
