@@ -70,7 +70,7 @@ console.log('start');
         });
 
         $('ul.menu span').click(function() {
-          event.preventDefault();
+      //    event.preventDefault();
           var node = $(this).is('a') ? $(this) : $(this).closest('a');
           /* Clear all open and not nested element  */
           console.log(this);
